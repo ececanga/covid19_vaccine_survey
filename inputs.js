@@ -47,36 +47,42 @@ class Inputs extends Component {
                 <ScrollView>
                     <Text style={styles.titleStyle}>COVID-19 VACCINE SURVEY FORM</Text>
                     <TextInput style = {styles.input}
+                               accessibilityLabel="name"
                                underlineColorAndroid = "transparent"
                                placeholder = "○ Name-surname"
                                placeholderTextColor = "#8e9031"
                                autoCapitalize = "none"
                                onChangeText = {this.handleName}/>
                     <TextInput style = {styles.input}
+                               accessibilityLabel="birthday"
                                underlineColorAndroid = "transparent"
                                placeholder = "○ Birth Date"
                                placeholderTextColor = "#8e9031"
                                autoCapitalize = "none"
                                onChangeText = {this.handleBirthday}/>
                     <TextInput style = {styles.input}
+                               accessibilityLabel="city"
                                underlineColorAndroid = "transparent"
                                placeholder = "○ City"
                                placeholderTextColor = "#8e9031"
                                autoCapitalize = "none"
                                onChangeText = {this.handleCity}/>
                     <TextInput style = {styles.input}
+                               accessibilityLabel="gender"
                                underlineColorAndroid = "transparent"
                                placeholder = "○ Gender"
                                placeholderTextColor = "#8e9031"
                                autoCapitalize = "none"
                                onChangeText = {this.handleGender}/>
                     <TextInput style = {styles.input}
+                               accessibilityLabel="vaccineType"
                                underlineColorAndroid = "transparent"
                                placeholder = "○ Vaccine type they applied"
                                placeholderTextColor = "#8e9031"
                                autoCapitalize = "none"
                                onChangeText = {this.handleVaccineType}/>
                     <TextInput style = {styles.input}
+                               accessibilityLabel="sideEffect"
                                underlineColorAndroid = "transparent"
                                placeholder = "○ Any side effect after vaccination"
                                placeholderTextColor = "#8e9031"
@@ -88,6 +94,7 @@ class Inputs extends Component {
                         !this.isFormValid() ? null : (
                         <View>
                             <TouchableOpacity
+                                accessibilityLabel="submitSurvey"
                                 disabled={!this.isFormValid}
                                 style = {styles.submitButton}
                                 onPress = {
@@ -97,6 +104,10 @@ class Inputs extends Component {
                             </TouchableOpacity>
                         </View>)
                     }
+                    <TouchableOpacity
+                        testID={"LoginNextButton"}
+                        title={'Login'}
+                    />
                 </ScrollView>
             </View>
         )
